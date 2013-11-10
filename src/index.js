@@ -66,3 +66,5 @@ Decorate.prototype.compileFunction = function ( primary, predecor ) {
 	return fn;
 };
 
+if ( module ) module.exports = Decorate;
+

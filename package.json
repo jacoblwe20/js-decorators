@@ -1,0 +1,24 @@
+{
+  "name": "decorator",
+  "version": "0.0.0",
+  "description": "python like decorators using function mutation",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacoblwe20/js-decorators.git"
+  },
+  "keywords": [
+    "decorator"
+  ],
+  "author": "jacob lowe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jacoblwe20/js-decorators/issues"
+  }
+}
