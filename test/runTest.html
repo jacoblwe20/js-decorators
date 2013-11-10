@@ -1,0 +1,31 @@
+<!doctype html>
+<script src='../src/index.js'></script>
+<script>
+
+	var p = 1;
+
+	function x( a, b ) {
+		o[a] = b;
+		return o;
+	};
+
+	function q( a, b ) {
+		return a - b;
+	};
+
+	function y( a, b ) {
+		var o = { };
+		a = a * 2 + p;
+		console.log( p );
+	};
+
+	function b( a, b ) {
+		a = a + b * 2;
+	};
+
+	p = 2;
+
+	x = new Decorate( x, y, b );
+	q = new Decorate( q, y, b );
+
+</script>

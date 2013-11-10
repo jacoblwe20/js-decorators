@@ -1,0 +1,68 @@
+<!doctype html>
+<h1> Open that Console</h1>
+<script>
+// this will break apart a function
+var pattern = /function(.*)\((.*)\)\s?\{(.|[\s\S]*)\}/;
+function runTest( fn, then ) {
+	fn = fn.toString();
+	console.log( "=====================");
+	console.log( "Testing >>" + fn);
+	console.log( ">>>>>>>>>>>>>>>>>>>>>>>");
+	console.log( fn.match( pattern ) );
+	console.log( "<<<<<<<<<<<<<<<<<<<<<<<");
+	then();
+};
+
+var test = {
+	one : function ( ) {
+		console.log("Test 1");
+		var x = function ( ) { };
+		runTest( x, function ( ) {
+			test.two();
+		})
+	},
+	two : function ( ) {
+		console.log("Test 2");
+		var x = function(){};
+		runTest( x, function ( ) {
+			test.three();
+		})
+	},
+	three : function ( ) {
+		console.log("Test 3");
+		var x = function( a, b, c ){ return a + b + c; };
+		runTest( x, function ( ) {
+			test.four();
+		})
+	},
+	four : function ( ) {
+		console.log("Test 4");
+		var x = function x (){ return a + b + c; };
+		runTest( x, function ( ) {
+			test.five();
+		})
+	},
+	five : function ( ) {
+		console.log("Test 5");
+		var x = function x(){                     
+			return a + b + c;};
+		runTest( x, function ( ) {
+			test.six();
+		})
+	},
+	six : function ( ) {
+		console.log("Test 6");
+		var x = function x(){                     
+			
+			var x = 123;
+			var y = 567;
+
+
+			return a + b + c;
+		};
+		runTest( x, function ( ) {
+			//test.4();
+		})
+	}
+}
+</script>
