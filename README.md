@@ -1,5 +1,7 @@
 ### JS Decorators
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/jcblw/js-decorators.svg)](https://greenkeeper.io/)
+
 Using function mutation. `Warning` this is just an experiment. The performance of this code is probably terrible and might have weird effects in differnt situations. You can find the file in 
 
 ```
